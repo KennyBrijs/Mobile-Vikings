@@ -38,11 +38,6 @@ section[role="main"]{
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
 // 6. LAYOUT 				==============================
-header[role="banner"], section[role="main"], footer[role="contentinfo"]{
-	width: 90%;
-	margin: 0 auto;
-}
-
 header[role="banner"]{
 	> h1{
 		text-align: center;
@@ -55,6 +50,12 @@ header[role="banner"]{
 		}
 	}
 }
+
+section[role="main"]{
+	padding: 0 10px;
+}
+
+
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
 // 9. TEMPLATE SPECIFICS 	==============================

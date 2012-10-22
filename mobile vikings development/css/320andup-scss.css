@@ -44,15 +44,14 @@ body {
 section[role="main"] {
   background: #eee8dd url("../img/paper-pattern.jpg") repeat top center; }
 
-header[role="banner"], section[role="main"], footer[role="contentinfo"] {
-  width: 90%;
-  margin: 0 auto; }
-
 header[role="banner"] > h1 {
   text-align: center; }
 header[role="banner"] nav[role="navigation"] a {
   display: block;
   text-align: center; }
+
+section[role="main"] {
+  padding: 0 10px; }
 
 /* Typography =================================================== */
 @font-face {
@@ -1857,11 +1856,25 @@ table {
   html {
     background-image: url("../img/sea-pattern.jpg");
     background-repeat: repeat-x;
-    background-position: top center; } }
+    background-position: top center; }
+
+  section[role="main"] {
+    padding: 0 30px; } }
 @media only screen and (min-width: 768px) {
-  /* 768 =================================================== */ }
+  /* 768 =================================================== */
+  header[role="banner"], section[role="main"], footer[role="contentinfo"] {
+    width: 61.803%;
+    margin: 0 auto; } }
 @media only screen and (min-width: 992px) {
-  /* 992 =================================================== */ }
+  /* 992 =================================================== */
+  section[role="main"] {
+    padding: 0 50px; }
+
+  #blog article {
+    width: 45%;
+    float: left; }
+    #blog article:nth-child(even) {
+      margin-right: 10%; } }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */
   body {

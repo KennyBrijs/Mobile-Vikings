@@ -24,3 +24,7 @@ html{
 	background-repeat: repeat-x;
 	background-position: top center;
 }
+
+section[role="main"]{
+	padding: 0 30px;
+}
