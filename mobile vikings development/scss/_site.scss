@@ -20,7 +20,7 @@ font-size : 62.5%;
 -ms-text-size-adjust : 100%; }
 
 body {
-margin : 0;
+margin : 0 auto;
 padding : 0;
 width : 100%;
 background-color : transparent;
@@ -41,6 +41,12 @@ section[role="main"]{
 header[role="banner"], section[role="main"], footer[role="contentinfo"]{
 	width: 90%;
 	margin: 0 auto;
+}
+
+header[role="banner"]{
+	> h1{
+		text-align: center;
+	}
 }
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
