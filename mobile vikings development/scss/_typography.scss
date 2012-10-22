@@ -76,7 +76,12 @@ margin : 0;
 font-family : $baseheadingfont;
 font-weight : $baseheadingfontweight;
 color : $baseheadingfontcolor;
-text-rendering : optimizelegibility; }
+text-rendering : optimizelegibility; 
+
+	a{
+		color: $basecolor;
+	}
+}
 
 h1 small,
 h2 small {
@@ -86,13 +91,14 @@ color : $lightgrey; }
 h1,
 .h1 {
 margin-bottom : $baselineheight / 2;
-@include font-size(32);
-line-height : 1.2; }
+@include font-size(47.25);
+line-height : 1.2; 
+color: $red; }
 
 h2,
 .h2 {
 margin-bottom : $baselineheight / 2;
-@include font-size(24);
+@include font-size(31.5);
 line-height : 1.2; }
 
 h3,
@@ -149,6 +155,10 @@ height : 16px;
 padding : 0;
 background : transparent url(../img/a-rss.png) no-repeat 0 0;
 @include hide-text; }
+
+header time{
+	@include font-size(14);
+}
 
 // TYPOGRAPHY ====================================================
 
@@ -226,6 +236,10 @@ cursor : help; }
 b, strong {
 font-weight : bold; }
 
+em{
+	color: $red;
+}
+
 dfn {
 font-style : italic; }
 
@@ -265,3 +279,15 @@ top : -.5em; }
 
 sub {
 bottom : -.25em; }
+
+article header + p{
+	font-style: italic;
+	@include font-size(16);
+	color: $grey;
+}
+
+nav a, input[type="submit"]{
+	font-weight: bold;
+	@include font-size(16);
+	color: $white;
+}

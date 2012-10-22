@@ -18,6 +18,7 @@ $lightgrey 		: lighten($black, 75%);
 $lightergrey 	: lighten($black, 90%);
 $white 			: rgb(255,255,255);
 $beige 			: rgb(238,232,221);
+$red			: rgb(203,12,12);
 
 // 1. ROOT 					==============================
 
@@ -29,12 +30,13 @@ $textcolor : black;
 $basefont : opensans, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $basefontsize : 16;
 $baselineheight : 1.5em;
-$baseheadingfont : inherit;
-$baseheadingfontweight : bold;
-$baseheadingfontcolor : inherit;
 
-$altfont : Cambria, Georgia, Times, "Times New Roman";
+$altfont : geared, Cambria, Georgia, Times, "Times New Roman";
 $altlineheight : 1.35em;
+
+$baseheadingfont : $altfont;
+$baseheadingfontweight : normal;
+$baseheadingfontcolor : inherit;
 
 $codefont : Monaco, Courier New, monospace;
 

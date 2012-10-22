@@ -47,6 +47,13 @@ header[role="banner"]{
 	> h1{
 		text-align: center;
 	}
+
+	nav[role="navigation"]{
+		a{
+			display: block;
+			text-align: center;
+		}
+	}
 }
 // 7. VENDOR-SPECIFIC 		==============================
 // 8. MODERNIZR 			==============================
