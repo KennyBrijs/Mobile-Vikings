@@ -109,7 +109,7 @@ h2 small {
 
 h1,
 .h1 {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.25em;
   font-size: 47.25px;
   font-size: 4.725rem;
   line-height: 1.2;
@@ -183,9 +183,13 @@ h6,
   white-space: nowrap;
   overflow: hidden; }
 
-header time {
-  font-size: 14px;
-  font-size: 1.4rem; }
+header {
+  margin-bottom: 0.75em; }
+  header h2 {
+    margin-bottom: 0; }
+  header time {
+    font-size: 14px;
+    font-size: 1.4rem; }
 
 p,
 ol,

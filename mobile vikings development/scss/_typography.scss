@@ -90,7 +90,7 @@ color : $lightgrey; }
 
 h1,
 .h1 {
-margin-bottom : $baselineheight / 2;
+margin-bottom : $baselineheight / 6;
 @include font-size(47.25);
 line-height : 1.2; 
 color: $red; }
@@ -156,8 +156,14 @@ padding : 0;
 background : transparent url(../img/a-rss.png) no-repeat 0 0;
 @include hide-text; }
 
-header time{
-	@include font-size(14);
+header{
+	margin-bottom : $baselineheight / 2;
+	h2{
+		margin-bottom: 0;
+	}
+	time{
+		@include font-size(14);
+	}
 }
 
 // TYPOGRAPHY ====================================================
