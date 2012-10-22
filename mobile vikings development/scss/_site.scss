@@ -39,6 +39,9 @@ section[role="main"]{
 // 5. ELEMENTS 				==============================
 // 6. LAYOUT 				==============================
 header[role="banner"]{
+	@include clearfix();
+	padding: 40px 0 30px 0;
+
 	> h1{
 		text-align: center;
 	}
@@ -47,12 +50,17 @@ header[role="banner"]{
 		a{
 			display: block;
 			text-align: center;
+			padding: 8px 0 12px;
 		}
 	}
 }
 
 section[role="main"]{
 	padding: 0 10px;
+}
+
+footer[role="contentinfo"]{
+	text-align: center;
 }
 
 

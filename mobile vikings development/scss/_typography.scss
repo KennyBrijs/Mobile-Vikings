@@ -292,7 +292,7 @@ article header + p{
 	color: $grey;
 }
 
-nav a, input[type="submit"]{
+nav a:link, nav a:visited, nav a:hover, nav a:focus, nav:active, input[type="submit"]{
 	font-weight: bold;
 	@include font-size(16);
 	color: $white;

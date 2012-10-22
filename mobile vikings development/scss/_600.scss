@@ -25,6 +25,30 @@ html{
 	background-position: top center;
 }
 
+header h1.logo{
+	margin-bottom: 40px;
+}
+
+nav[role="navigation"]{
+	@include clearfix();
+	@include rounded(8px);
+	@include vertical(#e31212, #b10606);
+	border-top: 1px solid rgba(255,255,255,.4);
+	a{
+		width: 24.7%;
+		float: left;
+		border-right: 1px solid rgba(255,255,255,.4);
+		border-left: 1px solid rgba(0,0,0,.4);
+
+		&:first-child{
+			border-left: none;
+		}
+		&:last-child{
+			border-right: none;
+		}
+	}
+}
+
 section[role="main"]{
 	padding: 0 30px;
 }

@@ -151,6 +151,10 @@ height : 50px; }
 .swatch-warning span:nth-child(4) {
 @include background-alpha($warningcolor, .6); }
 
+footer[role="contentinfo"]{
+	color: $white;
+}
+
 // 4. TEXTURE 				==============================
 // 5. ELEMENTS 				==============================
 // 6. LAYOUT 				==============================
