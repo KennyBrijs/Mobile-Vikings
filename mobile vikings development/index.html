@@ -65,7 +65,17 @@ Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
 <body class="clearfix">
 
 <header role="banner" class="clearfix">
-<h1><a href="https://mobilevikings.com/nl/"><img src="images/mv-logo.png"></a></h1>
+<h1><a href="https://mobilevikings.com/nl/">
+	<div data-picture data-alt="Mobile Vikings">
+        <div data-src="images/mv-logo@s.png"></div>
+        <div data-src="images/mv-logo@l.png" data-media="(min-width: 600px)"></div>
+
+        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+        <noscript>
+            <img src="images/mv-logo@s.png" alt="Mobile Vikings">
+        </noscript>
+    </div>
+</a></h1>
 <nav role="navigation">
 	<a href="#">Home</a>
 	<a href="#blog">Blog</a>
