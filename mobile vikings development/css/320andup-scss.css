@@ -1805,7 +1805,10 @@ table {
   body {
     max-width: 1440px; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* 2x =================================================== */ }
+  /* 2x =================================================== */
+  .logo img {
+    width: 94px;
+    height: 94px; } }
 /* 320 and Up */
 /* Modules upstart */
 /* Version: 1.0 */
