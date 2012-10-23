@@ -1,0 +1,73 @@
+// ==========================================================
+
+// 320 and Up by Andy Clarke
+// Version: 3.0
+// URL: http://stuffandnonsense.co.uk/projects/320andup/
+// Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+// ==========================================================
+
+/* Page =================================================== */
+
+// 1. ROOT 					==============================
+
+html {
+background : $bodycolor;
+font-size : 62.5%;
+-webkit-overflow-scrolling : touch;
+-webkit-tap-highlight-color : lighten($basecolor, 75%);
+-webkit-text-size-adjust : 100%;
+-ms-text-size-adjust : 100%; }
+
+body {
+margin : 0 auto;
+padding : 0;
+width : 100%;
+background-color : transparent;
+font-family : $basefont;
+@include font-size();
+line-height : $baselineheight;
+color : $textcolor; }
+
+section[role="main"]{
+	background-color: $beige;
+}
+
+// 2. TYPOGRAPHY 			==============================
+// 3. COLOUR 				==============================
+// 4. TEXTURE 				==============================
+// 5. ELEMENTS 				==============================
+// 6. LAYOUT 				==============================
+header[role="banner"]{
+	@include clearfix();
+	padding: 20px 0 30px 0;
+
+	> h1{
+		text-align: center;
+	}
+
+	nav[role="navigation"]{
+		a{
+			display: block;
+			text-align: center;
+			padding: 8px 0 12px;
+		}
+	}
+}
+
+section[role="main"]{
+	padding:  30px 10px;
+}
+
+footer[role="contentinfo"]{
+	text-align: center;
+
+	nav a{
+		padding: 5px 10px;
+	}
+}
+
+
+// 7. VENDOR-SPECIFIC 		==============================
+// 8. MODERNIZR 			==============================
+// 9. TEMPLATE SPECIFICS 	==============================
