@@ -163,6 +163,7 @@ header{
 	}
 	time{
 		@include font-size(14);
+		color: $lightgrey;
 	}
 }
 
@@ -290,6 +291,12 @@ article header + p{
 	font-style: italic;
 	@include font-size(16);
 	color: $grey;
+}
+
+section[role="main"]{
+	article, section{
+		margin-bottom: 40px;
+	}
 }
 
 nav a:link, nav a:visited, nav a:hover, nav a:focus, nav:active, input[type="submit"]{

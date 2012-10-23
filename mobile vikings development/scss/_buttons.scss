@@ -39,6 +39,9 @@
     color: $buttoncolor;
     text-decoration: none;
   }
+
+  display: block;
+  @include rounded(8px);
 }
 
 input[type="submit"].btn:hover { border-color: $buttonbordercolor; }

@@ -40,7 +40,7 @@ section[role="main"]{
 // 6. LAYOUT 				==============================
 header[role="banner"]{
 	@include clearfix();
-	padding: 40px 0 30px 0;
+	padding: 20px 0 30px 0;
 
 	> h1{
 		text-align: center;
@@ -56,11 +56,15 @@ header[role="banner"]{
 }
 
 section[role="main"]{
-	padding: 0 10px;
+	padding:  30px 10px;
 }
 
 footer[role="contentinfo"]{
 	text-align: center;
+
+	nav a{
+		padding: 5px 10px;
+	}
 }
 
 

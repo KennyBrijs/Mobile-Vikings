@@ -46,7 +46,7 @@ section[role="main"] {
 
 header[role="banner"] {
   *zoom: 1;
-  padding: 40px 0 30px 0; }
+  padding: 20px 0 30px 0; }
   header[role="banner"]:before, header[role="banner"]:after {
     display: table;
     content: ""; }
@@ -60,10 +60,12 @@ header[role="banner"] {
     padding: 8px 0 12px; }
 
 section[role="main"] {
-  padding: 0 10px; }
+  padding: 30px 10px; }
 
 footer[role="contentinfo"] {
   text-align: center; }
+  footer[role="contentinfo"] nav a {
+    padding: 5px 10px; }
 
 /* Typography =================================================== */
 @font-face {
@@ -116,7 +118,7 @@ h6 {
 h1 small,
 h2 small {
   font-weight: normal;
-  color: #bfbfbf; }
+  color: #a6a6a6; }
 
 h1,
 .h1 {
@@ -200,7 +202,8 @@ header {
     margin-bottom: 0; }
   header time {
     font-size: 14px;
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    color: #a6a6a6; }
 
 p,
 ol,
@@ -319,6 +322,9 @@ article header + p {
   font-size: 16px;
   font-size: 1.6rem;
   color: gray; }
+
+section[role="main"] article, section[role="main"] section {
+  margin-bottom: 40px; }
 
 nav a:link, nav a:visited, nav a:hover, nav a:focus, nav:active, input[type="submit"] {
   font-weight: bold;
@@ -1198,7 +1204,7 @@ form {
     form legend small {
       font-size: 14px;
       font-size: 1.4rem;
-      color: #bfbfbf; }
+      color: #a6a6a6; }
   form p {
     margin-bottom: 0.75em; }
   form ul {
@@ -1498,7 +1504,11 @@ input:-moz-placeholder {
   -moz-background-clip: padding;
   background-clip: padding-box;
   cursor: pointer;
-  *margin-left: .3em; }
+  *margin-left: .3em;
+  display: block;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px; }
   .btn:visited, .btn:hover {
     color: #404040;
     text-decoration: none; }
@@ -1874,7 +1884,7 @@ table {
     background-position: top center; }
 
   header h1.logo {
-    margin-bottom: 40px; }
+    margin: 20px 0 40px; }
 
   nav[role="navigation"] {
     *zoom: 1;
@@ -1896,7 +1906,7 @@ table {
     nav[role="navigation"]:after {
       clear: both; }
     nav[role="navigation"] a {
-      width: 24.7%;
+      width: 24.6%;
       float: left;
       border-right: 1px solid rgba(255, 255, 255, 0.4);
       border-left: 1px solid rgba(0, 0, 0, 0.4); }
