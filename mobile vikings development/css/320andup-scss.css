@@ -42,7 +42,7 @@ body {
   color: black; }
 
 section[role="main"] {
-  background: #eee8dd url("../img/paper-pattern.jpg") repeat top center; }
+  background-color: #eee8dd; }
 
 header[role="banner"] {
   *zoom: 1;
@@ -1916,7 +1916,8 @@ table {
         border-right: none; }
 
   section[role="main"] {
-    padding: 0 30px; } }
+    padding: 0 30px;
+    background: url("../img/paper-pattern.jpg") repeat top center; } }
 @media only screen and (min-width: 768px) {
   /* 768 =================================================== */
   header[role="banner"], section[role="main"], footer[role="contentinfo"] {

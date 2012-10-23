@@ -44,3 +44,9 @@ Typografie
 ----------
 Font sizes op basis van de base font size (14px) op een modular scale gelegd
 (http://modularscale.com/scale/?px1=14&px2=16&ra1=1.5&ra2=0)
+
+
+
+Background images
+-----------------
+Geen grote background images maar gewoon kleur in mobile view omdat grote afbeeldingen de laadtijd op een traag netwerk kunnen vertragen
