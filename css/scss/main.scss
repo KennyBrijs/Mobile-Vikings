@@ -69,6 +69,8 @@ textarea {
 
 /* Author's custom styles */
 @import "fontface";
+@import "variables";
+@import "mixins";
 // SMACSS   ======================================
 @import "base";
 @import "layout";

@@ -1,1 +1,25 @@
 /* Base rules: smacss.com/book/type-base */
+body{
+	font-family: opensans;
+}
+
+h1, h2{
+	font-weight: normal;
+	font-family: geared;
+}
+
+a{
+	transition: color .3s;
+	&:link{
+		color: $blue;
+	}
+	&:visited{
+		color: $bluedark;
+	}
+	&:hover{
+		color: $red;
+	}
+	&:active{
+		color: $reddark;
+	}
+}
