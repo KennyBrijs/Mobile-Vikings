@@ -3,7 +3,7 @@
 // Layout rules
 header[role="banner"]{
 	margin-top: 40px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 
 	#logo img{
 		margin-bottom: 40px;
@@ -14,11 +14,25 @@ header[role="banner"]{
 		padding-bottom: 5px;
 	}
 }
+section#blog{
+	@include clearfix();
+
+	article{
+		width: 46.774193549%;
+		float: left;
+
+		&:nth-child(even){
+			margin-right: 6.451612903%;
+		}
+	}
+}
 // Module rules
 // State rules
 // Theme rules
 body{
 	background-image: url('img/sea-pattern.jpg');
+	background-repeat: repeat-x;
+	background-position: top center;
 }
 
 header[role="banner"] nav[role="navigation"]{

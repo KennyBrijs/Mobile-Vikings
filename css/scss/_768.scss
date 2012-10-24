@@ -1,18 +1,19 @@
 /* 768px and up rules */
 // Base rules
 // Layout rules
-section#blog{
-	@include clearfix();
-
-	article{
-		width: 45%;
-		float: left;
-
-		&:nth-child(even){
-			margin-right: 10%;
-		}
-	}
+header[role="banner"], section[role="main"], footer[role="contentinfo"]{
+	max-width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+section[role="main"]{
+	@include box-sizing();
+	padding-left: 30px;
+	padding-right: 30px;
 }
 // Module rules
 // State rules
 // Theme rules
+nav[role="navigation"]{
+	border-radius: 8px;
+}

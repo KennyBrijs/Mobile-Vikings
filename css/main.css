@@ -319,13 +319,16 @@ h1, h2 {
 h1 {
   font-size: 48px;
   font-size: 3rem;
-  margin: 30px 0 20px;
+  margin: 30px 0 0;
   color: #cb0c0c; }
 
 h2 {
   font-size: 28px;
   font-size: 1.75rem;
   margin: 20px 0 10px; }
+  h2 a {
+    color: black !important;
+    text-decoration: none; }
 
 a {
   transition: color .3s; }
@@ -515,15 +518,30 @@ section[role="main"] {
   /* 600px and up rules */
   header[role="banner"] {
     margin-top: 40px;
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
     header[role="banner"] #logo img {
       margin-bottom: 40px; }
     header[role="banner"] nav[role="navigation"] {
       padding-top: 4px;
       padding-bottom: 5px; }
 
+  section#blog {
+    *zoom: 1; }
+    section#blog:before, section#blog:after {
+      display: table;
+      content: ""; }
+    section#blog:after {
+      clear: both; }
+    section#blog article {
+      width: 46.774193549%;
+      float: left; }
+      section#blog article:nth-child(even) {
+        margin-right: 6.451612903%; }
+
   body {
-    background-image: url("img/sea-pattern.jpg"); }
+    background-image: url("img/sea-pattern.jpg");
+    background-repeat: repeat-x;
+    background-position: top center; }
 
   header[role="banner"] nav[role="navigation"] {
     background-color: #cb0c0c;
@@ -533,18 +551,21 @@ section[role="main"] {
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); } }
 @media only screen and (min-width: 768px) {
   /* 768px and up rules */
-  section#blog {
-    *zoom: 1; }
-    section#blog:before, section#blog:after {
-      display: table;
-      content: ""; }
-    section#blog:after {
-      clear: both; }
-    section#blog article {
-      width: 45%;
-      float: left; }
-      section#blog article:nth-child(even) {
-        margin-right: 10%; } }
+  header[role="banner"], section[role="main"], footer[role="contentinfo"] {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto; }
+
+  section[role="main"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  nav[role="navigation"] {
+    border-radius: 8px; } }
 @media only screen and (min-width: 992px) {
   /* 992px and up rules */ }
 @media only screen and (min-width: 1382px) {
