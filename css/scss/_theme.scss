@@ -6,6 +6,8 @@ body{
 header[role="banner"], footer[role="contentinfo"]{
 	color: $white;
 	nav a{
+		@include font-size(16);
+		font-weight: bold;
 		color: $white;
 		text-decoration: none;
 	}

@@ -1,1 +1,18 @@
 /* Module rules: smacss.com/book/type-module */
+#blog article{
+	header{
+		h2{
+			margin-bottom: 0;
+		}
+		+ p{
+			@include font-size(18);
+			font-style: italic;
+			color: $grey;
+		}
+	}
+	margin-bottom: 56px;
+}
+
+.btn{
+	@include button();
+}
