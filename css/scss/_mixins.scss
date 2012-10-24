@@ -62,8 +62,10 @@ height : auto; } } }
 
 @mixin button(){
 	@include font-size(16);
+	@include box-sizing();
 	display: block;
-	padding: 13px;
+	padding: 12px 10px 14px;
+	height: 50px;
 	border: 1px solid $black;
 	border-radius: 8px;
 	background-color: $grey;
@@ -74,8 +76,18 @@ height : auto; } } }
 	text-decoration: none;
 	text-shadow: 0 -1px 0 rgba($black, .75);
 	font-weight: bold;
+	transition: all .3s;
 
 	&:link, &:visited, &:hover, &:active{
 		color: $white;
+	}
+	&:hover{
+		@include font-size(18);
+		padding-top: 10px;
+		background-color: lighten($grey, 5%);
+		background-image: linear-gradient(lighten($grey, 10%), lighten($black, 5%));
+	}
+	&:active{
+		background-image: linear-gradient(lighten($black, 5%), lighten($grey, 10%));
 	}
 }

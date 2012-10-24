@@ -1,1 +1,32 @@
 /* 600px and up rules */
+// Base rules
+// Layout rules
+header[role="banner"]{
+	margin-top: 40px;
+	margin-bottom: 30px;
+
+	#logo img{
+		margin-bottom: 40px;
+	}
+
+	nav[role="navigation"]{
+		padding-top: 4px;
+		padding-bottom: 5px;
+	}
+}
+// Module rules
+// State rules
+// Theme rules
+body{
+	background-image: url('img/sea-pattern.jpg');
+}
+
+header[role="banner"] nav[role="navigation"]{
+	background-color: $red;
+	background-image: linear-gradient(lighten($red, 5%), darken($red, 5%));
+	border-top: 1px solid rgba($white, .4);
+
+	a{
+		text-shadow: 0 -1px 0 rgba($black, .3);
+	}
+}

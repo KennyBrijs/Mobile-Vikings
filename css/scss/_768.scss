@@ -1,1 +1,18 @@
 /* 768px and up rules */
+// Base rules
+// Layout rules
+section#blog{
+	@include clearfix();
+
+	article{
+		width: 45%;
+		float: left;
+
+		&:nth-child(even){
+			margin-right: 10%;
+		}
+	}
+}
+// Module rules
+// State rules
+// Theme rules
