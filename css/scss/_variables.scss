@@ -1,5 +1,7 @@
 // Colors
 $black:	rgb(0,0,0);
+$grey: lighten($black, 40%);
+$greylight: lighten($black, 60%);
 $white: rgb(255,255,255);
 
 $beige: rgb(238,233,221);
