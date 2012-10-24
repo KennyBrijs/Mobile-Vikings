@@ -336,6 +336,10 @@ a {
   a:active {
     color: #6b0606; }
 
+time[pubdate] {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
 form {
   font-size: 16px;
   font-size: 1rem; }
@@ -400,7 +404,7 @@ header[role="banner"], footer[role="contentinfo"] {
     text-decoration: none; }
 
 section[role="main"] {
-  background-color: #eee9dd; }
+  background: #eee9dd url("img/paper-pattern@s.jpg") repeat top center; }
 
 @media only screen and (min-width: 480px) {
   /* 480px and up rules */ }
@@ -413,7 +417,10 @@ section[role="main"] {
 @media only screen and (min-width: 1382px) {
   /* 1382px and up rules */ }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* Double ppi rules */ }
+  /* Double ppi rules */
+  #logo img {
+    width: 94px;
+    height: 94px; } }
 /* Helper classes */
 .ir {
   background-color: transparent;
