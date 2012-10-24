@@ -1,1 +1,16 @@
 /* Theme rules: smacss.com/book/type-theme */
+body{
+	background-color: $black;
+}
+
+header[role="banner"], footer[role="contentinfo"]{
+	color: $white;
+	nav a{
+		color: $white;
+		text-decoration: none;
+	}
+}
+
+section[role="main"]{
+	background-color: $beige;
+}

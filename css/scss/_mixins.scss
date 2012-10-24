@@ -1,6 +1,6 @@
 @mixin font-size($font-size: 16){
 font-size : #{$font-size}px;
-font-size : #{$font-size / 10}rem; }
+font-size : #{$font-size / 16}rem; } // $font-size / root em (16px)
 
 @mixin text-overflow() {
 overflow : hidden;

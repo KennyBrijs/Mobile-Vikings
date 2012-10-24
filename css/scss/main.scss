@@ -1,4 +1,7 @@
- @import "normalize";
+@import "normalize";
+@import "fontface";
+@import "variables";
+@import "mixins";
 
  /* HTML5 Boilerplate */
  
@@ -23,12 +26,12 @@ body {
 // These selection declarations have to be separate.
 // Customize the background color to match your design.
 ::-moz-selection {
-    background: #b3d4fc;
+    background: $bluelight;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: $bluelight;
     text-shadow: none;
 }
 
@@ -68,9 +71,6 @@ textarea {
 }
 
 /* Author's custom styles */
-@import "fontface";
-@import "variables";
-@import "mixins";
 // SMACSS   ======================================
 @import "base";
 @import "layout";

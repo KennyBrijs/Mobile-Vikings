@@ -1,1 +1,30 @@
 /* Layout rules: smacss.com/book/type-layout */
+header[role="banner"]{
+	@include clearfix();
+	text-align: center;
+
+	nav[role="navigation"] a{
+		width: 50%;
+		float: left;
+		display: block;
+		padding: 10px 0;
+	}
+	padding-bottom: 10px;
+}
+
+section[role="main"]{
+	@include clearfix();
+	padding: 0 10px 30px;
+}
+
+footer[role="contentinfo"]{
+	text-align: center;
+	padding: 10px;
+	nav{
+		@include clearfix();
+		margin-bottom: 20px;
+		a{
+			padding: 0 16px;
+		}
+	}
+}

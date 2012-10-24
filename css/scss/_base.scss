@@ -1,11 +1,25 @@
 /* Base rules: smacss.com/book/type-base */
 body{
+	@include font-size(14);
 	font-family: opensans;
 }
 
 h1, h2{
+	text-transform: uppercase;
 	font-weight: normal;
 	font-family: geared;
+
+}
+
+h1{
+	@include font-size(48);
+	color: $red;
+	margin: 30px 0 20px;
+}
+
+h2{
+	@include font-size(28);
+	margin: 20px 0 10px;
 }
 
 a{
@@ -22,4 +36,17 @@ a{
 	&:active{
 		color: $reddark;
 	}
+}
+
+form{
+	@include font-size(16);
+}
+
+:moz-placeholder{
+	font-style: italic;
+}
+
+nav a, a.btn, input[type="submit"]{
+	@include font-size(16);
+	font-weight: bold;
 }
