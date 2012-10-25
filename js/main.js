@@ -29,8 +29,17 @@
 
   $(function() {
     if (localStorage.email != null) {
-      return $("input#email").val(localStorage.email);
+      $("input#email").val(localStorage.email);
     }
+    return $('[href^="#"]').click(function() {
+      var destination, elementClicked;
+      elementClicked = $(this).attr("href");
+      destination = $(elementClicked).offset().top;
+      $("html:not(:animated),body:not(:animated)").animate({
+        scrollTop: destination - 20
+      }, 500);
+      return false;
+    });
   });
 
 }).call(this);

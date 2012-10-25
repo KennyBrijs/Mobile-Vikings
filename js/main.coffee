@@ -35,3 +35,10 @@ window.processNewsletterForm = (form) ->
 $ -> # Start this code when page is loaded
 	if localStorage.email? # If users email address is already stored locally
 		$("input#email").val localStorage.email # Fill out the email form
+
+	$('[href^="#"]').click(()-> # Make internal links scroll
+	   elementClicked = $(this).attr("href")
+	   destination = $(elementClicked).offset().top
+	   $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-20}, 500)
+	   return false
+	)
