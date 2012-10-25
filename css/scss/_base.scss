@@ -59,18 +59,30 @@ form{
 		width: 100%;
 
 		&[type="text"], &[type="email"]{
-			padding: 13px;
+			padding: 15px 13px;
 			border-radius: 8px;
-		}
-		&[type="text"], &[type="email"]{
 			border: 1px solid $greylight;
 			box-shadow: inset 1px 2px 2px rgba($black, .16);
+
+			&:focus::-webkit-input-placeholder {
+				color: $greylight;
+			}
 		}
 		&[type="submit"]{
 			@include button();
 		}
 	}
 
+	label{
+		display: block;
+		margin-left: 8px;
+		margin-bottom: 2px;
+		font-weight: bold;
+		color: $blue;
+		&:after{
+			content: ':';
+		}
+	}
 }
 
 ::-webkit-input-placeholder {

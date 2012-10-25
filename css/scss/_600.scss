@@ -27,6 +27,20 @@ section#blog{
 	}
 }
 // Module rules
+form.newsletter{
+	@include clearfix();
+	position: relative;
+	label[for="email"], input[type="email"]{
+		width: 70%;
+		float: left;
+	}
+	input[type="submit"]{
+		width: 28%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
 // State rules
 // Theme rules
 body{

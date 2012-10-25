@@ -2,7 +2,8 @@
 // Base rules
 // Layout rules
 header[role="banner"], section[role="main"], footer[role="contentinfo"]{
-	max-width: 620px;
+	width: 90%;
+	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
