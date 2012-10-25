@@ -412,12 +412,10 @@ form {
     font-weight: bold;
     color: #0096ec;
     cursor: pointer; }
-    form label.error {
-      animation: shake 1s; }
-      form label.error small {
-        display: block;
-        color: #cb0c0c;
-        font-weight: normal; }
+    form label small.invalid {
+      display: block;
+      color: #cb0c0c;
+      font-weight: normal; }
 
 ::-webkit-input-placeholder {
   color: #666666;
@@ -608,6 +606,9 @@ section[role="main"] {
     padding-right: 30px; }
 
   nav[role="navigation"] {
+    border-radius: 8px; }
+
+  section[role="main"] {
     border-radius: 8px; } }
 @media only screen and (min-width: 992px) {
   /* 992px and up rules */ }

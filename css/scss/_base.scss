@@ -80,13 +80,10 @@ form{
 		font-weight: bold;
 		color: $blue;
 		cursor: pointer;
-		&.error{
-			animation: shake 1s;
-			small{
+		small.invalid{
 				display: block;
 				color: $red;
 				font-weight: normal;
-			}
 		}
 	}
 }
