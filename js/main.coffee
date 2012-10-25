@@ -1,5 +1,4 @@
-window.validateEmail = (form) ->
-	email = form.elements['email'].value
+window.validateEmail = (email) ->
 	emailPattern = /// ^ 	#begin of line
 	([\w.-]+)				#one or more letters, numbers, _ . or -
 	@                 		#followed by an @ sign
@@ -19,3 +18,20 @@ window.validateEmail = (form) ->
 		)
 	
 	return false # Prevent form submission
+
+
+
+
+window.processNewsletterForm = (form) ->
+	email = form.elements['email'].value
+
+	if Storage? # If local storage is supported
+		localStorage.email = email #store users email
+
+	validateEmail email
+
+
+
+$ -> # Start this code when page is loaded
+	if localStorage.email? # If users email address is already stored locally
+		$("input#email").val localStorage.email # Fill out the email form
