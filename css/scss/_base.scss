@@ -79,8 +79,14 @@ form{
 		margin-bottom: 2px;
 		font-weight: bold;
 		color: $blue;
-		&:after{
-			content: ':';
+		cursor: pointer;
+		&.error{
+			animation: shake 1s;
+			small{
+				display: block;
+				color: $red;
+				font-weight: normal;
+			}
 		}
 	}
 }
