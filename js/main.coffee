@@ -1,27 +1,34 @@
-$ -> # Start this code when page is loade
+map = null
+
+$ -> # Start this code when page is loaded
 	$("input#email").val localStorage.email if localStorage.email? # Fill out the email form if users email address is already stored locally
 	$('[href^="#"]').click(scrollTo) # Make pagesection links scroll
 
 	# Leaflet map
-	map = createMap()
-	addMarker(map)
+	map = new Map()
+	map.createMap()
+	map.addMarker(50.94958, 5.34657)
+	navigator.geolocation.getCurrentPosition(showUserPosition) if navigator.geolocation?
 
+class Map
+	map: null
+	latitude: 50.94958
+	longitude: 5.34657
+	zoom: 7
+	maxZoom: 18
 
-# map =
-# 	location: [50.94958, 5.34657]
-
-createMap = () ->
-	map = L.map('map').setView([50.94958, 5.34657], 10)
-	L.tileLayer('http://{s}.tile.cloudmade.com/744d221a8986462c8970d7087063bd59/997/256/{z}/{x}/{y}.png', {
-		attribution: 'Map &copy Cloudmade',
-		maxZoom: 18
-	}).addTo(map)
-	map
-
-addMarker = (map) ->
-	marker = L.marker([50.94958, 5.34657]).addTo(map)
-	marker
+	createMap: () ->
+		this.map = L.map('map').setView([this.latitude, this.longitude], this.zoom)
+		L.tileLayer('http://{s}.tile.cloudmade.com/744d221a8986462c8970d7087063bd59/997/256/{z}/{x}/{y}.png', {
+			attribution: 'Map &copy Cloudmade',
+			maxZoom: this.maxZoom
+		}).addTo(this.map)
 	
+	addMarker: (longitude, latitude) ->
+		L.marker([longitude, latitude]).addTo(this.map)
+
+showUserPosition = (position) ->
+	map.addMarker(position.coords.latitude, position.coords.longitude)
 
 scrollTo = () ->
 	elementClicked = $(this).attr("href")
@@ -54,8 +61,7 @@ window.processNewsletterForm = (form) ->
 	email = form.elements['email'].value
 
 	if isValidEmail email
-		if Storage? # If local storage is supported
-			localStorage.email = email #store users email
+		localStorage.email = email if Storage? # Store users email if local storage is supported
 		true # allow form submission
 	else
 		noErrorMessage = true if $('label[for="email"] small.invalid').length == 0 # Check if form hasn't got an errormessage already to prevent adding multiple messages
