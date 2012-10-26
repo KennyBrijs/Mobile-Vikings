@@ -16,3 +16,7 @@
 .btn{
 	@include button();
 }
+
+#map{
+	height: 350px;
+}

@@ -1,13 +1,33 @@
-$ -> # Start this code when page is loaded
-	if localStorage.email? # If users email address is already stored locally
-		$("input#email").val localStorage.email # Fill out the email form
+$ -> # Start this code when page is loade
+	$("input#email").val localStorage.email if localStorage.email? # Fill out the email form if users email address is already stored locally
+	$('[href^="#"]').click(scrollTo) # Make pagesection links scroll
 
-	$('[href^="#"]').click(()-> # Make links to page sections scroll
-	   elementClicked = $(this).attr("href")
-	   destination = $(elementClicked).offset().top
-	   $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-20}, 500)
-	   return false
-	)
+	# Leaflet map
+	map = createMap()
+	addMarker(map)
+
+
+# map =
+# 	location: [50.94958, 5.34657]
+
+createMap = () ->
+	map = L.map('map').setView([50.94958, 5.34657], 10)
+	L.tileLayer('http://{s}.tile.cloudmade.com/744d221a8986462c8970d7087063bd59/997/256/{z}/{x}/{y}.png', {
+		attribution: 'Map &copy Cloudmade',
+		maxZoom: 18
+	}).addTo(map)
+	map
+
+addMarker = (map) ->
+	marker = L.marker([50.94958, 5.34657]).addTo(map)
+	marker
+	
+
+scrollTo = () ->
+	elementClicked = $(this).attr("href")
+	destination = $(elementClicked).offset().top
+	$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-20}, 500)
+	false
 
 isValidEmail = (email) ->
 	emailPattern = /// ^ 	#begin of line
@@ -19,9 +39,9 @@ isValidEmail = (email) ->
 	$ ///i            		#end of line and ignore case
 
 	if email.match emailPattern # If email address is valid
-		return true
+		true
 	else 
-		return false
+		false
 
 showEmailError = (message) ->
 	# 1. Add error message 2. Make it appear 3. When it shows, shake label
@@ -33,7 +53,7 @@ showEmailError = (message) ->
 window.processNewsletterForm = (form) ->
 	email = form.elements['email'].value
 
-	if isValidEmail email 
+	if isValidEmail email
 		if Storage? # If local storage is supported
 			localStorage.email = email #store users email
 		true # allow form submission

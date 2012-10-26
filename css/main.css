@@ -536,6 +536,9 @@ footer[role="contentinfo"] {
   .btn:active {
     background-image: linear-gradient(#1a1a1a, #737373); }
 
+#map {
+  height: 350px; }
+
 /* State rules: smacss.com/book/type-state */
 /* Theme rules: smacss.com/book/type-theme */
 body {
