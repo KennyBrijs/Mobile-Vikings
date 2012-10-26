@@ -37,7 +37,7 @@ a{
 	&:visited{
 		color: $bluedark;
 	}
-	&:hover{
+	&:hover, &:focus{
 		color: $red;
 	}
 	&:active{

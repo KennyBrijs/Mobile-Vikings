@@ -347,7 +347,7 @@ a {
     color: #0096ec; }
   a:visited {
     color: #005586; }
-  a:hover {
+  a:hover, a:focus {
     color: #cb0c0c; }
   a:active {
     color: #6b0606; }
@@ -397,14 +397,14 @@ form {
       transition: all .3s; }
       form input[type="submit"]:link, form input[type="submit"]:visited, form input[type="submit"]:hover, form input[type="submit"]:active {
         color: white; }
-      form input[type="submit"]:hover {
+      form input[type="submit"]:hover, form input[type="submit"]:focus {
         font-size: 18px;
         font-size: 1.125rem;
         padding-top: 10px;
         background-color: #737373;
         background-image: linear-gradient(gray, #0d0d0d); }
       form input[type="submit"]:active {
-        background-image: linear-gradient(#0d0d0d, gray); }
+        background-image: linear-gradient(#1a1a1a, #737373); }
   form label {
     display: block;
     margin-left: 8px;
@@ -505,14 +505,14 @@ footer[role="contentinfo"] {
   transition: all .3s; }
   .btn:link, .btn:visited, .btn:hover, .btn:active {
     color: white; }
-  .btn:hover {
+  .btn:hover, .btn:focus {
     font-size: 18px;
     font-size: 1.125rem;
     padding-top: 10px;
     background-color: #737373;
     background-image: linear-gradient(gray, #0d0d0d); }
   .btn:active {
-    background-image: linear-gradient(#0d0d0d, gray); }
+    background-image: linear-gradient(#1a1a1a, #737373); }
 
 /* State rules: smacss.com/book/type-state */
 /* Theme rules: smacss.com/book/type-theme */

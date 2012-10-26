@@ -81,13 +81,13 @@ height : auto; } } }
 	&:link, &:visited, &:hover, &:active{
 		color: $white;
 	}
-	&:hover{
+	&:hover, &:focus{
 		@include font-size(18);
 		padding-top: 10px;
 		background-color: lighten($grey, 5%);
 		background-image: linear-gradient(lighten($grey, 10%), lighten($black, 5%));
 	}
 	&:active{
-		background-image: linear-gradient(lighten($black, 5%), lighten($grey, 10%));
+		background-image: linear-gradient(lighten($black, 10%), lighten($grey, 5%));
 	}
 }
