@@ -321,6 +321,16 @@ textarea {
   50% {
     box-shadow: 0 0 14px #0096ec; } }
 
+@keyframes jump {
+  0%, 50%, 100% {
+    transform: translateY(0); }
+
+  25% {
+    transform: translateY(-21px); }
+
+  75% {
+    transform: translateY(-7px); } }
+
 /* Base rules: smacss.com/book/type-base */
 body {
   font-size: 14px;
@@ -530,6 +540,9 @@ footer[role="contentinfo"] {
 /* Theme rules: smacss.com/book/type-theme */
 body {
   background-color: black; }
+
+header[role="banner"] a#logo:hover img {
+  animation: jump .5s ease .1s; }
 
 header[role="banner"], footer[role="contentinfo"] {
   color: white; }

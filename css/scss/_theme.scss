@@ -3,6 +3,12 @@ body{
 	background-color: $black;
 }
 
+header[role="banner"]{
+	a#logo:hover img{
+		animation: jump .5s ease .1s;
+	}
+}
+
 header[role="banner"], footer[role="contentinfo"]{
 	color: $white;
 	nav a{
