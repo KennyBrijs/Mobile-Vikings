@@ -314,6 +314,13 @@ textarea {
   20%, 40%, 60%, 80% {
     transform: translateX(10px); } }
 
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: none; }
+
+  50% {
+    box-shadow: 0 0 14px #0096ec; } }
+
 /* Base rules: smacss.com/book/type-base */
 body {
   font-size: 14px;
@@ -370,10 +377,12 @@ form {
     form input[type="text"], form input[type="email"] {
       padding: 15px 13px;
       border-radius: 8px;
-      border: 1px solid #999999;
-      box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.16); }
-      form input[type="text"]:focus::-webkit-input-placeholder, form input[type="email"]:focus::-webkit-input-placeholder {
-        color: #999999; }
+      border: 1px solid #999999; }
+      form input[type="text"]:focus, form input[type="email"]:focus {
+        animation: pulse .8s;
+        box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.16); }
+        form input[type="text"]:focus ::-webkit-input-placeholder, form input[type="email"]:focus ::-webkit-input-placeholder {
+          color: #999999; }
     form input[type="submit"] {
       font-size: 16px;
       font-size: 1rem;
@@ -416,6 +425,9 @@ form {
       display: block;
       color: #cb0c0c;
       font-weight: normal; }
+
+*:focus {
+  outline: none; }
 
 ::-webkit-input-placeholder {
   color: #666666;
