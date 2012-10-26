@@ -11,7 +11,7 @@
     $('[href^="#"]').click(scrollTo);
     map = new Map();
     map.createMap();
-    map.addMarker(50.94958, 5.34657);
+    map.addMarker(50.94958, 5.34657, "<b>Viking Basis</b><br />Come and say hi!");
     if (navigator.geolocation != null) {
       return navigator.geolocation.getCurrentPosition(showUserPosition);
     }
@@ -23,11 +23,11 @@
 
     Map.prototype.map = null;
 
-    Map.prototype.latitude = 50.94958;
+    Map.prototype.latitude = 50.85034;
 
-    Map.prototype.longitude = 5.34657;
+    Map.prototype.longitude = 4.35171;
 
-    Map.prototype.zoom = 7;
+    Map.prototype.zoom = 8;
 
     Map.prototype.maxZoom = 18;
 
@@ -39,8 +39,12 @@
       }).addTo(this.map);
     };
 
-    Map.prototype.addMarker = function(longitude, latitude) {
-      return L.marker([longitude, latitude]).addTo(this.map);
+    Map.prototype.addMarker = function(longitude, latitude, message) {
+      var marker;
+      marker = L.marker([longitude, latitude]).addTo(this.map);
+      if (message != null) {
+        return marker.bindPopup(message).openPopup();
+      }
     };
 
     return Map;

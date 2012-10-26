@@ -7,14 +7,14 @@ $ -> # Start this code when page is loaded
 	# Leaflet map
 	map = new Map()
 	map.createMap()
-	map.addMarker(50.94958, 5.34657)
+	map.addMarker(50.94958, 5.34657, "<b>Viking Basis</b><br />Come and say hi!")
 	navigator.geolocation.getCurrentPosition(showUserPosition) if navigator.geolocation?
 
 class Map
 	map: null
-	latitude: 50.94958
-	longitude: 5.34657
-	zoom: 7
+	latitude: 50.85034
+	longitude: 4.35171
+	zoom: 8
 	maxZoom: 18
 
 	createMap: () ->
@@ -24,8 +24,9 @@ class Map
 			maxZoom: this.maxZoom
 		}).addTo(this.map)
 	
-	addMarker: (longitude, latitude) ->
-		L.marker([longitude, latitude]).addTo(this.map)
+	addMarker: (longitude, latitude, message) ->
+		marker = L.marker([longitude, latitude]).addTo(this.map)
+		marker.bindPopup(message).openPopup() if message?
 
 showUserPosition = (position) ->
 	map.addMarker(position.coords.latitude, position.coords.longitude)
