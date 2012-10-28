@@ -457,18 +457,6 @@ header[role="banner"] {
     content: ""; }
   header[role="banner"]:after {
     clear: both; }
-  header[role="banner"] nav[role="navigation"] {
-    *zoom: 1; }
-    header[role="banner"] nav[role="navigation"]:before, header[role="banner"] nav[role="navigation"]:after {
-      display: table;
-      content: ""; }
-    header[role="banner"] nav[role="navigation"]:after {
-      clear: both; }
-    header[role="banner"] nav[role="navigation"] a {
-      width: 50%;
-      float: left;
-      display: block;
-      padding: 10px 0; }
 
 section[role="main"] {
   *zoom: 1;
@@ -494,6 +482,19 @@ footer[role="contentinfo"] {
       padding: 0 16px; }
 
 /* Module rules: smacss.com/book/type-module */
+nav[role="navigation"] {
+  *zoom: 1; }
+  nav[role="navigation"]:before, nav[role="navigation"]:after {
+    display: table;
+    content: ""; }
+  nav[role="navigation"]:after {
+    clear: both; }
+  nav[role="navigation"] a {
+    width: 50%;
+    float: left;
+    display: block;
+    padding: 10px 0; }
+
 #blog article {
   margin-bottom: 56px; }
   #blog article header h2 {
@@ -565,10 +566,9 @@ a[href$="twitter.com/mobilevikings"]:before, a[href$="facebook.com/mobilevikings
   margin-right: 3px;
   vertical-align: -2px;
   background-size: 1em; }
-
-a:hover:before {
+a[href$="twitter.com/mobilevikings"]:hover:before, a[href$="facebook.com/mobilevikings"]:hover:before {
   transform: rotateY(-360deg);
-  transition: transform 1s ease; }
+  transition: transform .5s ease-in; }
 
 a[href$="twitter.com/mobilevikings"]:before {
   background-image: url("img/twitter-logo@l.png"); }
@@ -653,7 +653,12 @@ section[role="main"] {
     background-image: linear-gradient(#e30d0d, #b30b0b);
     border-top: 1px solid rgba(255, 255, 255, 0.4); }
     header[role="banner"] nav[role="navigation"] a {
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); } }
+      transition: text-shadow .2s ease-in;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
+      header[role="banner"] nav[role="navigation"] a:hover, header[role="banner"] nav[role="navigation"] a:focus {
+        text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.5); }
+      header[role="banner"] nav[role="navigation"] a:active {
+        text-shadow: -1px -2px 0 rgba(0, 0, 0, 0.3); } }
 @media only screen and (min-width: 768px) {
   /* 768px and up rules */
   header[role="banner"], section[role="main"], footer[role="contentinfo"] {

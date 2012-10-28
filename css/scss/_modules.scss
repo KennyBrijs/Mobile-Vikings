@@ -1,4 +1,14 @@
 /* Module rules: smacss.com/book/type-module */
+nav[role="navigation"]{
+	@include clearfix();
+	a{
+		width: 50%;
+		float: left;
+		display: block;
+		padding: 10px 0;
+	}
+}
+
 #blog article{
 	header{
 		h2{
@@ -51,12 +61,10 @@ a[href$="twitter.com/mobilevikings"], a[href$="facebook.com/mobilevikings"]{
 		vertical-align: -2px;
 		background-size: 1em;
 	}
-}
-
-a:hover:before{
-	transform: rotateY(-360deg);
-    //backface-visibility: hidden;
-    transition: transform 1s ease;
+	&:hover:before{
+		transform: rotateY(-360deg);
+	    transition: transform .5s ease-in;
+	}
 }
 
 a[href$="twitter.com/mobilevikings"]:before{

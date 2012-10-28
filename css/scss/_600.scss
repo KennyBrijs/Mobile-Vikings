@@ -54,6 +54,15 @@ header[role="banner"] nav[role="navigation"]{
 	border-top: 1px solid rgba($white, .4);
 
 	a{
-		text-shadow: 0 -1px 0 rgba($black, .3);
+		$text-shadow: 0 -1px 0 rgba($black, .3);
+		transition: text-shadow .2s ease-in;
+		text-shadow: $text-shadow;
+		
+		&:hover, &:focus{
+			text-shadow: 1px 2px 0 rgba($black, .5);	
+		}
+		&:active{
+			text-shadow: -1px -2px 0 rgba($black, .3);
+		}
 	}
 }
