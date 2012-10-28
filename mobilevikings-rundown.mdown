@@ -9,7 +9,7 @@ Algemeen
 
 - Ik gebruik zo weinig mogelijk classes en ID's en zo veel mogelijk semantische [WAI-AIRA roles](http://www.alistapart.com/articles/waiaria)
 
-- Ik heb [mijn eigen framework](https://github.com/KennyBrijs/Rocketlaunch-Framework) samengesteld waarin ik:
+- Ik heb [mijn eigen framework](https://github.com/KennyBrijs/Baloo-Boilerplate) samengesteld waarin ik:
 	- Het beste uit [HTML5 Boilerplate](http://html5boilerplate.com/) haal: files en code die ik niet gebruik werden verwijderd
 
 	- Het beste uit [320andup](http://stuffandnonsense.co.uk/projects/320andup/) haal: enkel de structuur van de CSS bestanden voor responsive webdevelopment
@@ -17,7 +17,7 @@ Algemeen
 	- De SASS files opdeel volgens de principes van [Scalable and Modular Architecture for CSS: SMACSS](http://smacss.com/) wat zorgt voor makkelijker hergebruik van code en een betere onderhoudbaarheid
 
 	- De code sorteer ik achteraf nog eens met CSSComb, wat ook zorgt voor uniformiteit, leesbaarheid en dus beter onderhoudbare code
-
+	
 
 
 Achtergronden
@@ -32,12 +32,14 @@ Logo
 ----
 - CSS3 animatie bij hover (springt op en bounce)
 
-- Responsive Image met picturefill.js
+- Responsive en Retina Image met picturefill.js
   Waarom picturefill.js:
 	- Kleinere afbeeldingen op mobiel: minder dataverbruik: goedkoper en sneller
 	- Fallback afbeelding naar keuze wanneer JavaScript uitgeschakeld is <noscript>
 	- Geen overhead: sommige plugins laden eerst de fallback afbeeldingen en daarna de responsive image naar keuze, dankzij de <noscript> tag is dit niet het geval
 	- De syntax van deze plugin [ligt enorm dicht tegen de W3C proposal voor responsive images](https://twitter.com/kennybrijs/status/245615652080066561), waardoor de overstap eenvoudig te maken is wanneer er uiteindelijk een standaard voor responsive images komt
+
+- Geen image replacement dit is een gevaar bij de zoekmachines, soms zien ze deze technieken als hacks en dat wordt afgestraft. Google geeft het alt attribuut van img gelijke waarde als tekst, dus image replacement is ook helemaal niet nodig.
 
 
 
@@ -53,14 +55,18 @@ Blog
 
 - Publicatiedatum gebruikt het HTML5 <time> element met pubdate attribuut -> semantiek, toepassingen zoals RSS readers kunnen hier iets mee.
 
-- Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons op de pagina geplaatst, [omdat deze meer kwaad dan goed doen](http://informationarchitects.net/blog/sweep-the-sleaze/):
+- Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons bij de blogposts geplaatst, [omdat deze meer kwaad dan goed doen](http://informationarchitects.net/blog/sweep-the-sleaze/):
 	1. Ze vertragen de pagina
 
-	2. Ze komen een beetje wanhopig over (“vind mij leuk aub”)
+	2. Verschillende sites kregen méér verkeer van sociale netwerken wanneer ze deze buttons verwijderden
 
-	3. Mensen die sociale netwerken gebruiken wéten hoe ze ze moeten gebruiken. Daarnaast, als ze de link op hun tijdlijn kopiëren wordt dit veel meer gezien dan wanneer ze een artikel gewoon “leuk vinden.”
+	3. Mensen die sociale netwerken gebruiken wéten hoe ze zaken moeten delen. Als de inhoud goed is en ze willen hem delen zullen ze dat doen, en als dat niet het geval is zullen ze ook niet “tegen hun zin” op een share-button klikken. Daarnaast, als ze de link op hun tijdlijn kopiëren wordt dit veel meer gezien dan wanneer ze een artikel gewoon “leuk vinden.”
 
-	4. Verschillende sites kregen méér verkeer van sociale netwerken wanneer ze deze buttons verwijderden
+	4. Wat ik wél heb gedaan is links naar de facebook en twitter account bij de nieuwsbriefsectie geplaatst, waar ze zinvol zijn: mensen kunnen op de hoogte blijven via verschillende kanalen.
+
+		1. De logo's zijn zeer klein gehouden om over te komen als een nuttige link in plaats van aandacht-trekkerij
+
+		2. Kleine verassingseffect bij hover (delight effect)
 
 
 

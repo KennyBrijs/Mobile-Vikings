@@ -539,6 +539,25 @@ footer[role="contentinfo"] {
 #map {
   height: 350px; }
 
+a[href$="twitter.com/mobilevikings"]:before, a[href$="facebook.com/mobilevikings"]:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 3px;
+  vertical-align: -2px;
+  background-size: 1em; }
+
+a:hover:before {
+  transform: rotateY(-360deg);
+  transition: transform 1s ease; }
+
+a[href$="twitter.com/mobilevikings"]:before {
+  background-image: url("img/twitter-logo@l.png"); }
+
+a[href$="facebook.com/mobilevikings"]:before {
+  background-image: url("img/facebook-logo@l.png"); }
+
 /* State rules: smacss.com/book/type-state */
 /* Theme rules: smacss.com/book/type-theme */
 body {
