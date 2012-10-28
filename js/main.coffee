@@ -1,5 +1,9 @@
 map = null
 
+
+
+
+
 $ -> # Start this code when page is loaded
 	$("input#email").val localStorage.email if localStorage.email? # Fill out the email form if users email address is already stored locally
 	$('[href^="#"]').click(scrollTo) # Make pagesection links scroll
@@ -7,38 +11,51 @@ $ -> # Start this code when page is loaded
 	# Leaflet map
 	map = new Map()
 	map.createMap()
-	map.addMarker(50.94958, 5.34657, "<b>Viking Basis</b><br />Come and say hi!")
-	navigator.geolocation.getCurrentPosition(showUserPosition) if navigator.geolocation?
+	navigator.geolocation.getCurrentPosition(getCurrentPositionHandler) if navigator.geolocation?
+
+
+
+
+
+getCurrentPositionHandler = (position) ->
+		map.addMarker(position.coords.latitude, position.coords.longitude)
+		map.fitBound([position.coords.latitude, position.coords.longitude])
 
 class Map
 	map: null
-	latitude: 50.85034
-	longitude: 4.35171
-	zoom: 8
-	maxZoom: 9
-	minZoom: 7
-
+	latitude: 50.94958
+	longitude: 5.34657
+	zoom: 10
 
 	createMap: () ->
-		this.map = L.map('map').setView([this.latitude, this.longitude], this.zoom)
+		this.map = L.map('map', {scrollWheelZoom: false}).setView([this.latitude, this.longitude], this.zoom)
 		L.tileLayer('http://{s}.tile.cloudmade.com/744d221a8986462c8970d7087063bd59/997/256/{z}/{x}/{y}.png', {
-			attribution: 'Map &copy Cloudmade',
-			maxZoom: this.maxZoom,
-			minZoom: this.minZoom
+			attribution: 'Map &copy Cloudmade'
 		}).addTo(this.map)
-	
+
+		this.addMarker(this.latitude, this.longitude, "<b>Viking Basis</b><br />Come and say hi!")
+
 	addMarker: (longitude, latitude, message) ->
 		marker = L.marker([longitude, latitude]).addTo(this.map)
 		marker.bindPopup(message).openPopup() if message?
 
-showUserPosition = (position) ->
-	map.addMarker(position.coords.latitude, position.coords.longitude)
+	fitBound: (bound) ->
+		this.map.fitBounds([[this.latitude, this.longitude], bound])
+
+
+
+
+
 
 scrollTo = () ->
 	elementClicked = $(this).attr("href")
 	destination = $(elementClicked).offset().top
 	$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-20}, 500)
 	false
+
+
+
+
 
 isValidEmail = (email) ->
 	emailPattern = /// ^ 	#begin of line
