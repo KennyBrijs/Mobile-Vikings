@@ -21,6 +21,26 @@
 	height: 350px;
 }
 
+ul.vcard{
+	padding-left: 0;
+	list-style: none;
+	@include clearfix();
+
+	li{
+		margin-bottom: 14px;
+		width: 46.774193549%;
+		float: left;
+
+		&:nth-child(odd){
+			margin-right: 6.451612903%;
+		}
+
+		b{
+			display: block;
+		}
+	}
+}
+
 a[href$="twitter.com/mobilevikings"], a[href$="facebook.com/mobilevikings"]{
 	&:before{
 		content: '';
@@ -32,7 +52,6 @@ a[href$="twitter.com/mobilevikings"], a[href$="facebook.com/mobilevikings"]{
 		background-size: 1em;
 	}
 }
-
 
 a:hover:before{
 	transform: rotateY(-360deg);

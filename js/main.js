@@ -29,13 +29,16 @@
 
     Map.prototype.zoom = 8;
 
-    Map.prototype.maxZoom = 18;
+    Map.prototype.maxZoom = 9;
+
+    Map.prototype.minZoom = 7;
 
     Map.prototype.createMap = function() {
       this.map = L.map('map').setView([this.latitude, this.longitude], this.zoom);
       return L.tileLayer('http://{s}.tile.cloudmade.com/744d221a8986462c8970d7087063bd59/997/256/{z}/{x}/{y}.png', {
         attribution: 'Map &copy Cloudmade',
-        maxZoom: this.maxZoom
+        maxZoom: this.maxZoom,
+        minZoom: this.minZoom
       }).addTo(this.map);
     };
 

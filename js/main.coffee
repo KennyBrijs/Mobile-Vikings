@@ -15,13 +15,16 @@ class Map
 	latitude: 50.85034
 	longitude: 4.35171
 	zoom: 8
-	maxZoom: 18
+	maxZoom: 9
+	minZoom: 7
+
 
 	createMap: () ->
 		this.map = L.map('map').setView([this.latitude, this.longitude], this.zoom)
 		L.tileLayer('http://{s}.tile.cloudmade.com/744d221a8986462c8970d7087063bd59/997/256/{z}/{x}/{y}.png', {
 			attribution: 'Map &copy Cloudmade',
-			maxZoom: this.maxZoom
+			maxZoom: this.maxZoom,
+			minZoom: this.minZoom
 		}).addTo(this.map)
 	
 	addMarker: (longitude, latitude, message) ->

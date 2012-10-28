@@ -539,6 +539,24 @@ footer[role="contentinfo"] {
 #map {
   height: 350px; }
 
+ul.vcard {
+  padding-left: 0;
+  list-style: none;
+  *zoom: 1; }
+  ul.vcard:before, ul.vcard:after {
+    display: table;
+    content: ""; }
+  ul.vcard:after {
+    clear: both; }
+  ul.vcard li {
+    margin-bottom: 14px;
+    width: 46.774193549%;
+    float: left; }
+    ul.vcard li:nth-child(odd) {
+      margin-right: 6.451612903%; }
+    ul.vcard li b {
+      display: block; }
+
 a[href$="twitter.com/mobilevikings"]:before, a[href$="facebook.com/mobilevikings"]:before {
   content: '';
   display: inline-block;
