@@ -60,19 +60,19 @@ Blog
 
 - Publicatiedatum gebruikt het HTML5 <time> element met pubdate attribuut -> semantiek, toepassingen zoals RSS readers kunnen hier iets mee.
 
-- Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons bij de blogposts geplaatst, [omdat deze meer kwaad dan goed doen](http://informationarchitects.net/blog/sweep-the-sleaze/)
+- Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons bij de blogposts geplaatst, omdat deze meer kwaad dan goed doen http://informationarchitects.net/blog/sweep-the-sleaze/
 
-1. Ze vertragen de pagina
+	1. Ze vertragen de pagina
 
-2. Verschillende sites kregen méér verkeer van sociale netwerken wanneer ze deze buttons verwijderden
+	2. Verschillende sites kregen méér verkeer van sociale netwerken wanneer ze deze buttons verwijderden
 
-3. Mensen die sociale netwerken gebruiken wéten hoe ze zaken moeten delen. Als de inhoud goed is en ze willen hem delen zullen ze dat doen, en als dat niet het geval is zullen ze ook niet “tegen hun zin” op een share-button klikken. Daarnaast, als ze de link op hun tijdlijn kopiëren wordt dit veel meer gezien dan wanneer ze een artikel gewoon “leuk vinden.”
+	3. Mensen die sociale netwerken gebruiken wéten hoe ze zaken moeten delen. Als de inhoud goed is en ze willen hem delen zullen ze dat doen, en als dat niet het geval is zullen ze ook niet “tegen hun zin” op een share-button klikken. Daarnaast, als ze de link op hun tijdlijn kopiëren wordt dit veel meer gezien dan wanneer ze een artikel gewoon “leuk vinden.”
 
-4. Wat ik wél heb gedaan is links naar de facebook en twitter account bij de nieuwsbriefsectie geplaatst, waar ze zinvol zijn: mensen kunnen op de hoogte blijven via verschillende kanalen.
+	4. Wat ik wél heb gedaan is links naar de facebook en twitter account bij de nieuwsbriefsectie geplaatst, waar ze zinvol zijn: mensen kunnen op de hoogte blijven via verschillende kanalen.
 
-	1. De logo's zijn zeer klein gehouden om over te komen als een nuttige link in plaats van aandacht-trekkerij
+		1. De logo's zijn zeer klein gehouden om over te komen als een nuttige link in plaats van aandacht-trekkerij
 
-	2. Kleine verassingseffect bij hover in firefox (webkit ondersteunt geen transform animaties op inline of inline-block elementen)
+		2. Kleine verassingseffect bij hover in firefox (webkit ondersteunt geen transform animaties op inline of inline-block elementen)
 
 
 
