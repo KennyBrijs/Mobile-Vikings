@@ -3,7 +3,7 @@ Mobile Vikings - The Rundown
 
 Algemeen
 --------
-- Interne links op de pagina (href=#sectie) scrollen. Geen plugin, maar 3 lijnen jQuery
+- Interne links op de pagina (href=#sectie) scrollen. Geen plugin, maar 3 lijnen jQuery/CoffeeScript
 
 - Knoppen nemen volledige breedte in op mobile en tablet: grotere aanraakzone -> verbeterde gebruiksvriendelijkheid
 
@@ -45,7 +45,7 @@ Logo
 
 Menu
 ----
-- Past zich aan aan verschillende schermbreedtes
+- Past zich aan aan verschillende schermbreedtes, net als de rest van de site.
 
 
 
@@ -66,13 +66,23 @@ Blog
 
 		1. De logo's zijn zeer klein gehouden om over te komen als een nuttige link in plaats van aandacht-trekkerij
 
-		2. Kleine verassingseffect bij hover (delight effect)
+		2. Kleine verassingseffect bij hover in firefox (webkit ondersteunt geen transform animaties op inline of inline-block elementen)
 
 
 
 Kaart
 -----
-- Als de gebruiker toestemming geeft wordt via HTML5 geolocation de locatie van de gebruiker aan de kaart toegevoegd.
+- Standaard staat de kaart gezoomd op Hasselt. Als de gebruiker toestemming geeft om zijn locatie te zien wordt via HTML5 geolocation de locatie van de gebruiker aan de kaart toegevoegd en worden deze 2 markers automatisch binnen beeld gebracht.
+
+- De kaart kan niet ingezoomd worden door te scrollen. Dit vloekte tegen de gebruiksvriendelijkheid: als je op de pagina naar beneden scrolde en de aanwijzer kwam op de map terecht was je plots aan het uitzoomen.
+
+- De code voor de kaart is in een JavaScript class overgebracht voor makkelijk hergebruik en uitbreiding.
+
+- De contactgegevens boven de kaart gebruiken het microformat vcard formaat, waardoor deze gegevens ook betekenis kunnen hebben voor bepaalde software (semantiek, kan makkelijk aan adressenlijst worden toegevoegd, &hellip;)
+
+- Adres is link naar google maps met het juiste adres, als mensen er op klikken kunnen ze zo meteen de weg opvragen.
+
+- Ook het telefoonnummer is een link (href="tel:"), mobiele gebruikers kunnen hier op klikken en dan staat hun gsm meteen klaar om te bellen of het nummer op te slaan.
 
 
 
@@ -83,8 +93,8 @@ Nieuwsbrief
 - Validatie voor email in CoffeeScript
 	- CSS3 animatie bij foutief email adres (label schudt “nee” -> intuitief en dus gebruiksvriendelijk)
 
-	De bedoeling was om het label bij elke foutieve poging te animeren, maar dit blijkt zeer moeilijk te zijn. [Zelfs Chris Coyier van CSS Tricks.com kan hier geen oplossing voor geven zonder hack](http://css-tricks.com/restart-css-animation/).
+	De bedoeling was om het label bij elke foutieve poging opnieuw te animeren, maar dit blijkt zeer moeilijk te zijn. [Zelfs Chris Coyier van CSS Tricks.com kan hier geen oplossing voor geven zonder hack](http://css-tricks.com/restart-css-animation/).
 
 	Als het moét kan het dus—door dezelfde animatie twee keer te schrijven onder een andere naam—maar dit soort hacks vermijd ik liever.
 
-- Als het email adres correct is wordt het opgeslagen via HTML5 localStorage. In dit geval niet zo nuttig—niemand wil zich twee keer inschrijven met hetzelfde adres—maar later kan het hergebruikt worden bij bvb. een aanmeldingsformulier.
+- Als het email adres correct is wordt het opgeslagen via HTML5 localStorage zodat latere formulieren makkelijk automatisch aangevuld kunnen worden.
