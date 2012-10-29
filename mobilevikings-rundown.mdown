@@ -10,6 +10,7 @@ Algemeen
 - Ik gebruik zo weinig mogelijk classes en ID's en zo veel mogelijk semantische [WAI-AIRA roles](http://www.alistapart.com/articles/waiaria)
 
 - Ik heb [mijn eigen framework](https://github.com/KennyBrijs/Baloo-Boilerplate) samengesteld waarin ik:
+
 	- Het beste uit [HTML5 Boilerplate](http://html5boilerplate.com/) haal: files en code die ik niet gebruik werden verwijderd
 
 	- Het beste uit [320andup](http://stuffandnonsense.co.uk/projects/320andup/) haal: enkel de structuur van de CSS bestanden voor responsive webdevelopment
@@ -55,7 +56,7 @@ Blog
 
 - Publicatiedatum gebruikt het HTML5 <time> element met pubdate attribuut -> semantiek, toepassingen zoals RSS readers kunnen hier iets mee.
 
-- Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons bij de blogposts geplaatst, [omdat deze meer kwaad dan goed doen](http://informationarchitects.net/blog/sweep-the-sleaze/):
+- Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons bij de blogposts geplaatst, [omdat deze meer kwaad dan goed doen](http://informationarchitects.net/blog/sweep-the-sleaze/)
 
 	1. Ze vertragen de pagina
 
