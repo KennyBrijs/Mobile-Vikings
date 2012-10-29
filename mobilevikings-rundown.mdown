@@ -62,9 +62,9 @@ Blog
 
 - Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons bij de blogposts geplaatst, [omdat deze meer kwaad dan goed doen](http://informationarchitects.net/blog/sweep-the-sleaze/)
 
-	1. Ze vertragen de pagina
+1. Ze vertragen de pagina
 
-	2. Verschillende sites kregen méér verkeer van sociale netwerken wanneer ze deze buttons verwijderden
+2. Verschillende sites kregen méér verkeer van sociale netwerken wanneer ze deze buttons verwijderden
 
 	3. Mensen die sociale netwerken gebruiken wéten hoe ze zaken moeten delen. Als de inhoud goed is en ze willen hem delen zullen ze dat doen, en als dat niet het geval is zullen ze ook niet “tegen hun zin” op een share-button klikken. Daarnaast, als ze de link op hun tijdlijn kopiëren wordt dit veel meer gezien dan wanneer ze een artikel gewoon “leuk vinden.”
 
