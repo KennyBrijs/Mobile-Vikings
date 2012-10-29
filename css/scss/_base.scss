@@ -1,15 +1,20 @@
 /* Base rules: smacss.com/book/type-base */
 body{
 	@include font-size(14);
-	font-family: opensans;
+	font-family: $bodyfont;
 	font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
+	background-color: $black;
+}
+
+section[role="main"]{
+	background: $beige url('img/paper-pattern@s.jpg') repeat top center;
 }
 
 h1, h2{
 	text-transform: uppercase;
 	font-weight: normal;
-	font-family: geared;
+	font-family: $titlefont;
 
 }
 
