@@ -1,8 +1,8 @@
 /* Layout rules: smacss.com/book/type-layout */
 header[role="banner"]{
 	@include clearfix();
-	text-align: center;
 	padding-bottom: 10px;
+	text-align: center;
 }
 
 section[role="main"]{
@@ -11,8 +11,8 @@ section[role="main"]{
 }
 
 footer[role="contentinfo"]{
-	text-align: center;
 	padding: 10px;
+	text-align: center;
 	nav{
 		@include clearfix();
 		margin-bottom: 20px;

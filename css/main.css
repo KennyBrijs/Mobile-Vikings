@@ -250,28 +250,28 @@ body {
 
 hr {
   display: block;
+  margin: 1em 0;
+  padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0; }
+  border-top: 1px solid #ccc; }
 
 img {
   vertical-align: middle; }
 
 fieldset {
-  border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  border: 0; }
 
 textarea {
   resize: vertical; }
 
 .chromeframe {
   margin: 0.2em 0;
+  padding: 0.2em 0;
   background: #ccc;
-  color: #000;
-  padding: 0.2em 0; }
+  color: #000; }
 
 /* Author's custom styles */
 /* @font-face rules */
@@ -335,10 +335,10 @@ textarea {
 body {
   font-size: 14px;
   font-size: 0.875rem;
+  background-color: black;
   font-family: opensans, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  background-color: black; }
+  text-rendering: optimizeLegibility; }
 
 section[role="main"] {
   background: #eee9dd url("img/paper-pattern@s.jpg") repeat top center; }
@@ -390,20 +390,16 @@ form {
     width: 100%; }
     form input[type="text"], form input[type="email"] {
       padding: 15px 13px;
-      border-radius: 8px;
-      border: 1px solid #999999; }
+      border: 1px solid #999999;
+      border-radius: 8px; }
       form input[type="text"]:focus, form input[type="email"]:focus {
-        animation: pulse .8s;
-        box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.16); }
+        box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.16);
+        animation: pulse .8s; }
         form input[type="text"]:focus ::-webkit-input-placeholder, form input[type="email"]:focus ::-webkit-input-placeholder {
           color: #999999; }
     form input[type="submit"] {
       font-size: 16px;
       font-size: 1rem;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      -ms-box-sizing: border-box;
       display: block;
       padding: 12px 10px 14px;
       height: 50px;
@@ -417,7 +413,11 @@ form {
       text-decoration: none;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
       font-weight: bold;
-      transition: all .3s; }
+      transition: all .3s;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      -ms-box-sizing: border-box; }
       form input[type="submit"]:link, form input[type="submit"]:visited, form input[type="submit"]:hover, form input[type="submit"]:active {
         color: white; }
       form input[type="submit"]:hover, form input[type="submit"]:focus {
@@ -430,10 +430,10 @@ form {
         background-image: linear-gradient(#1a1a1a, #737373); }
   form label {
     display: block;
-    margin-left: 8px;
     margin-bottom: 2px;
-    font-weight: bold;
+    margin-left: 8px;
     color: #0096ec;
+    font-weight: bold;
     cursor: pointer; }
     form label small.invalid {
       display: block;
@@ -454,8 +454,8 @@ form {
 /* Layout rules: smacss.com/book/type-layout */
 header[role="banner"] {
   *zoom: 1;
-  text-align: center;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  text-align: center; }
   header[role="banner"]:before, header[role="banner"]:after {
     display: table;
     content: ""; }
@@ -472,8 +472,8 @@ section[role="main"] {
     clear: both; }
 
 footer[role="contentinfo"] {
-  text-align: center;
-  padding: 10px; }
+  padding: 10px;
+  text-align: center; }
   footer[role="contentinfo"] nav {
     *zoom: 1;
     margin-bottom: 20px; }
@@ -497,19 +497,19 @@ nav[role="navigation"] {
   nav[role="navigation"]:after {
     clear: both; }
   nav[role="navigation"] a {
-    width: 50%;
-    float: left;
     display: block;
-    padding: 10px 0; }
+    float: left;
+    padding: 10px 0;
+    width: 50%; }
 
 header[role="banner"], footer[role="contentinfo"] {
   color: white; }
   header[role="banner"] nav a:link, footer[role="contentinfo"] nav a:link {
     font-size: 16px;
     font-size: 1rem;
-    font-weight: bold;
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    font-weight: bold; }
 
 footer[role="contentinfo"] nav a:hover {
   text-decoration: underline; }
@@ -521,16 +521,12 @@ footer[role="contentinfo"] nav a:hover {
   #blog article header + p {
     font-size: 18px;
     font-size: 1.125rem;
-    font-style: italic;
-    color: #666666; }
+    color: #666666;
+    font-style: italic; }
 
 .btn {
   font-size: 16px;
   font-size: 1rem;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -ms-box-sizing: border-box;
   display: block;
   padding: 12px 10px 14px;
   height: 50px;
@@ -544,7 +540,11 @@ footer[role="contentinfo"] nav a:hover {
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.75);
   font-weight: bold;
-  transition: all .3s; }
+  transition: all .3s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-box-sizing: border-box; }
   .btn:link, .btn:visited, .btn:hover, .btn:active {
     color: white; }
   .btn:hover, .btn:focus {
@@ -560,34 +560,34 @@ footer[role="contentinfo"] nav a:hover {
   height: 350px; }
 
 ul.vcard {
+  *zoom: 1;
   padding-left: 0;
-  list-style: none;
-  *zoom: 1; }
+  list-style: none; }
   ul.vcard:before, ul.vcard:after {
     display: table;
     content: ""; }
   ul.vcard:after {
     clear: both; }
   ul.vcard li {
+    float: left;
     margin-bottom: 14px;
-    width: 46.774193549%;
-    float: left; }
+    width: 46.774193549%; }
     ul.vcard li:nth-child(odd) {
       margin-right: 6.451612903%; }
     ul.vcard li b {
       display: block; }
 
 a[href$="twitter.com/mobilevikings"]:before, a[href$="facebook.com/mobilevikings"]:before {
-  content: '';
   display: inline-block;
+  margin-right: 3px;
   width: 1em;
   height: 1em;
-  margin-right: 3px;
-  vertical-align: -2px;
-  background-size: 1em; }
+  background-size: 1em;
+  content: '';
+  vertical-align: -2px; }
 a[href$="twitter.com/mobilevikings"]:hover:before, a[href$="facebook.com/mobilevikings"]:hover:before {
-  transform: rotateY(-360deg);
-  transition: transform .5s ease-in; }
+  transition: transform .5s ease-in;
+  transform: rotateY(-360deg); }
 
 a[href$="twitter.com/mobilevikings"]:before {
   background-image: url("img/twitter-logo@l.png"); }
@@ -622,8 +622,8 @@ a[href$="facebook.com/mobilevikings"]:before {
     section#blog:after {
       clear: both; }
     section#blog article {
-      width: 46.774193549%;
-      float: left; }
+      float: left;
+      width: 46.774193549%; }
       section#blog article:nth-child(even) {
         margin-right: 6.451612903%; }
 
@@ -636,26 +636,26 @@ a[href$="facebook.com/mobilevikings"]:before {
     form.newsletter:after {
       clear: both; }
     form.newsletter label[for="email"], form.newsletter input[type="email"] {
-      width: 70%;
-      float: left; }
+      float: left;
+      width: 70%; }
     form.newsletter input[type="submit"] {
-      width: 28%;
       position: absolute;
+      right: 0;
       bottom: 0;
-      right: 0; }
+      width: 28%; }
 
   body {
     background-image: url("img/sea-pattern.jpg");
-    background-repeat: repeat-x;
-    background-position: top center; }
+    background-position: top center;
+    background-repeat: repeat-x; }
 
   header[role="banner"] nav[role="navigation"] {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     background-color: #cb0c0c;
-    background-image: linear-gradient(#e30d0d, #b30b0b);
-    border-top: 1px solid rgba(255, 255, 255, 0.4); }
+    background-image: linear-gradient(#e30d0d, #b30b0b); }
     header[role="banner"] nav[role="navigation"] a {
-      transition: text-shadow .2s ease-in;
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3); }
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+      transition: text-shadow .2s ease-in; }
       header[role="banner"] nav[role="navigation"] a:hover, header[role="banner"] nav[role="navigation"] a:focus {
         text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.5); }
       header[role="banner"] nav[role="navigation"] a:active {
@@ -663,18 +663,18 @@ a[href$="facebook.com/mobilevikings"]:before {
 @media only screen and (min-width: 768px) {
   /* 768px and up rules */
   header[role="banner"], section[role="main"], footer[role="contentinfo"] {
-    width: 90%;
-    max-width: 800px;
+    margin-right: auto;
     margin-left: auto;
-    margin-right: auto; }
+    max-width: 800px;
+    width: 90%; }
 
   section[role="main"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -ms-box-sizing: border-box;
-    padding-left: 30px;
-    padding-right: 30px; }
+    padding-right: 30px;
+    padding-left: 30px; }
 
   nav[role="navigation"] {
     border-radius: 8px; }
@@ -692,47 +692,47 @@ a[href$="facebook.com/mobilevikings"]:before {
     height: 94px; } }
 /* Helper classes */
 .ir {
-  background-color: transparent;
-  border: 0;
   overflow: hidden;
+  border: 0;
+  background-color: transparent;
   *text-indent: -9999px; }
 
 .ir:before {
-  content: "";
   display: block;
   width: 0;
-  height: 100%; }
+  height: 100%;
+  content: ""; }
 
 .hidden {
   display: none !important;
   visibility: hidden; }
 
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
   position: absolute;
-  width: 1px; }
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0; }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
   position: static;
-  width: auto; }
+  overflow: visible;
+  clip: auto;
+  margin: 0;
+  width: auto;
+  height: auto; }
 
 .invisible {
   visibility: hidden; }
 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: table; }
+  display: table;
+  content: " "; }
 
 .clearfix:after {
   clear: both; }
@@ -744,8 +744,8 @@ a[href$="facebook.com/mobilevikings"]:before {
   * {
     background: transparent !important;
     color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important; }
+    text-shadow: none !important;
+    box-shadow: none !important; }
 
   a,
   a:visited {

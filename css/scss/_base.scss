@@ -1,10 +1,10 @@
 /* Base rules: smacss.com/book/type-base */
 body{
 	@include font-size(14);
+	background-color: $black;
 	font-family: $bodyfont;
 	font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-	background-color: $black;
 }
 
 section[role="main"]{
@@ -65,12 +65,12 @@ form{
 
 		&[type="text"], &[type="email"]{
 			padding: 15px 13px;
-			border-radius: 8px;
 			border: 1px solid $greylight;
+			border-radius: 8px;
 
 			&:focus{
-				animation: pulse .8s;
 				box-shadow: inset 1px 2px 2px rgba($black, .16);
+				animation: pulse .8s;
 				::-webkit-input-placeholder {
 					color: $greylight;
 				}
@@ -83,10 +83,10 @@ form{
 
 	label{
 		display: block;
-		margin-left: 8px;
 		margin-bottom: 2px;
-		font-weight: bold;
+		margin-left: 8px;
 		color: $blue;
+		font-weight: bold;
 		cursor: pointer;
 		small.invalid{
 				display: block;

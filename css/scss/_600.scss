@@ -18,8 +18,8 @@ section#blog{
 	@include clearfix();
 
 	article{
-		width: 46.774193549%;
 		float: left;
+		width: 46.774193549%;
 		&:nth-child(even){
 			margin-right: 6.451612903%;
 		}
@@ -30,33 +30,33 @@ form.newsletter{
 	@include clearfix();
 	position: relative;
 	label[for="email"], input[type="email"]{
-		width: 70%;
 		float: left;
+		width: 70%;
 	}
 	input[type="submit"]{
-		width: 28%;
 		position: absolute;
-		bottom: 0;
 		right: 0;
+		bottom: 0;
+		width: 28%;
 	}
 }
 // State rules
 // Theme rules
 body{
 	background-image: url('img/sea-pattern.jpg');
-	background-repeat: repeat-x;
 	background-position: top center;
+	background-repeat: repeat-x;
 }
 
 header[role="banner"] nav[role="navigation"]{
+	border-top: 1px solid rgba($white, .4);
 	background-color: $red;
 	background-image: linear-gradient(lighten($red, 5%), darken($red, 5%));
-	border-top: 1px solid rgba($white, .4);
 
 	a{
 		$text-shadow: 0 -1px 0 rgba($black, .3);
-		transition: text-shadow .2s ease-in;
 		text-shadow: $text-shadow;
+		transition: text-shadow .2s ease-in;
 		
 		&:hover, &:focus{
 			text-shadow: 1px 2px 0 rgba($black, .5);	

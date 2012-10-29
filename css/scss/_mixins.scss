@@ -62,7 +62,6 @@ height : auto; } } }
 
 @mixin button(){
 	@include font-size(16);
-	@include box-sizing();
 	display: block;
 	padding: 12px 10px 14px;
 	height: 50px;
@@ -90,4 +89,5 @@ height : auto; } } }
 	&:active{
 		background-image: linear-gradient(lighten($black, 10%), lighten($grey, 5%));
 	}
+	@include box-sizing();
 }

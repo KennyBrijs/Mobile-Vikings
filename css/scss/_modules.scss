@@ -9,10 +9,10 @@ header[role="banner"]{
 nav[role="navigation"]{
 	@include clearfix();
 	a{
-		width: 50%;
-		float: left;
 		display: block;
+		float: left;
 		padding: 10px 0;
+		width: 50%;
 	}
 }
 
@@ -20,9 +20,9 @@ header[role="banner"], footer[role="contentinfo"]{
 	color: $white;
 	nav a:link{
 		@include font-size(16);
-		font-weight: bold;
 		color: $white;
 		text-decoration: none;
+		font-weight: bold;
 	}
 }
 
@@ -31,17 +31,17 @@ footer[role="contentinfo"] nav a:hover{
 }
 
 #blog article{
+	margin-bottom: 56px;
 	header{
 		h2{
 			margin-bottom: 0;
 		}
 		+ p{
 			@include font-size(18);
-			font-style: italic;
 			color: $grey;
+			font-style: italic;
 		}
 	}
-	margin-bottom: 56px;
 }
 
 .btn{
@@ -53,14 +53,14 @@ footer[role="contentinfo"] nav a:hover{
 }
 
 ul.vcard{
+	@include clearfix();
 	padding-left: 0;
 	list-style: none;
-	@include clearfix();
 
 	li{
+		float: left;
 		margin-bottom: 14px;
 		width: 46.774193549%;
-		float: left;
 
 		&:nth-child(odd){
 			margin-right: 6.451612903%;
@@ -74,17 +74,17 @@ ul.vcard{
 
 a[href$="twitter.com/mobilevikings"], a[href$="facebook.com/mobilevikings"]{
 	&:before{
-		content: '';
 		display: inline-block;
+		margin-right: 3px;
 		width: 1em;
 		height: 1em;
-		margin-right: 3px;
-		vertical-align: -2px;
 		background-size: 1em;
+		content: '';
+		vertical-align: -2px;
 	}
 	&:hover:before{
-		transform: rotateY(-360deg);
 	    transition: transform .5s ease-in;
+		transform: rotateY(-360deg);
 	}
 }
 
