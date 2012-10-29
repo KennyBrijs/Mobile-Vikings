@@ -335,14 +335,18 @@ textarea {
 body {
   font-size: 14px;
   font-size: 0.875rem;
-  font-family: opensans;
+  font-family: opensans, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  background-color: black; }
+
+section[role="main"] {
+  background: #eee9dd url("img/paper-pattern@s.jpg") repeat top center; }
 
 h1, h2 {
   text-transform: uppercase;
   font-weight: normal;
-  font-family: geared; }
+  font-family: geared, Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif; }
 
 h1 {
   font-size: 48px;
@@ -482,6 +486,9 @@ footer[role="contentinfo"] {
       padding: 0 16px; }
 
 /* Module rules: smacss.com/book/type-module */
+header[role="banner"] a#logo:hover img {
+  animation: jump .5s ease .1s; }
+
 nav[role="navigation"] {
   *zoom: 1; }
   nav[role="navigation"]:before, nav[role="navigation"]:after {
@@ -494,6 +501,18 @@ nav[role="navigation"] {
     float: left;
     display: block;
     padding: 10px 0; }
+
+header[role="banner"], footer[role="contentinfo"] {
+  color: white; }
+  header[role="banner"] nav a:link, footer[role="contentinfo"] nav a:link {
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; }
+
+footer[role="contentinfo"] nav a:hover {
+  text-decoration: underline; }
 
 #blog article {
   margin-bottom: 56px; }
@@ -578,24 +597,6 @@ a[href$="facebook.com/mobilevikings"]:before {
 
 /* State rules: smacss.com/book/type-state */
 /* Theme rules: smacss.com/book/type-theme */
-body {
-  background-color: black; }
-
-header[role="banner"] a#logo:hover img {
-  animation: jump .5s ease .1s; }
-
-header[role="banner"], footer[role="contentinfo"] {
-  color: white; }
-  header[role="banner"] nav a, footer[role="contentinfo"] nav a {
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    text-decoration: none; }
-
-section[role="main"] {
-  background: #eee9dd url("img/paper-pattern@s.jpg") repeat top center; }
-
 @media print {
   /* Print rules */ }
 @media only screen and (min-width: 480px) {
