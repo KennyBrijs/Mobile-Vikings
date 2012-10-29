@@ -61,6 +61,7 @@ Blog
 - Publicatiedatum gebruikt het HTML5 <time> element met pubdate attribuut -> semantiek, toepassingen zoals RSS readers kunnen hier iets mee.
 
 - Er was gevraagd om optimalisatie voor sociale netwerken. Ik heb bewust géén share-buttons bij de blogposts geplaatst, [omdat deze meer kwaad dan goed doen](http://informationarchitects.net/blog/sweep-the-sleaze/)
+
 1. Ze vertragen de pagina
 
 2. Verschillende sites kregen méér verkeer van sociale netwerken wanneer ze deze buttons verwijderden
