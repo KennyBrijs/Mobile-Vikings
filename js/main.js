@@ -63,10 +63,9 @@
     var destination, elementClicked;
     elementClicked = $(this).attr("href");
     destination = $(elementClicked).offset().top;
-    $("html:not(:animated),body:not(:animated)").animate({
+    return $("html:not(:animated),body:not(:animated)").animate({
       scrollTop: destination - 20
     }, 500);
-    return false;
   };
 
   isValidEmail = function(email) {

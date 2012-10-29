@@ -18,12 +18,13 @@ nav[role="navigation"]{
 
 header[role="banner"], footer[role="contentinfo"]{
 	color: $white;
-	nav a:link{
+	nav a{
 		@include font-size(16);
 		color: $white;
 		text-decoration: none;
 		font-weight: bold;
 	}
+
 }
 
 footer[role="contentinfo"] nav a:hover{

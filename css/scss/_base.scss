@@ -31,6 +31,10 @@ h2{
 	a{
 		color: $black !important;
 		text-decoration: none;
+
+		&:hover{
+			color: $red !important;
+		}
 	}
 }
 

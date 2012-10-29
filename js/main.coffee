@@ -51,7 +51,6 @@ scrollTo = () ->
 	elementClicked = $(this).attr("href")
 	destination = $(elementClicked).offset().top
 	$("html:not(:animated),body:not(:animated)").animate({scrollTop: destination-20}, 500)
-	false
 
 
 
